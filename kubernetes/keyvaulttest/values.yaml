@@ -1,0 +1,19 @@
+registry: <your-registry-name>
+
+env: 
+  "ASPNETCORE_ENVIRONMENT": "Staging"
+  "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true"
+  "KeyVaultName": ""
+  "UserAssignedClientId": ""
+
+image:
+  name: keyvaulttest
+  tag: latest
+
+replicas: 1
+
+# to get your DNS zone name use:
+# az aks show -g {resource-group-name} -n {aks-cluster-name} -o tsv --query addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName
+# example: 51.138.82.127.nip.io (set through GitHub secrets)
+dns:
+  name: <your-dns-zone-name>
