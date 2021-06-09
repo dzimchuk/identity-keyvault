@@ -4,7 +4,7 @@ metadata:
   name: keyvault-test-app
   namespace: {{ default "keyvault-test" .Release.Namespace }}
 spec:
-  replicas: {{ .Valuesreplicas }}
+  replicas: {{ .Values.replicas }}
   strategy: 
     type: RollingUpdate
     rollingUpdate:
