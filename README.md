@@ -52,4 +52,5 @@ helm upgrade \
     ./kubernetes/keyvaulttest \
     --set registry= \
     --set env.KeyVaultName= \
-    --set env.UserAssignedClientId=    
+    --set env.UserAssignedClientId= \
+    --set dns.name=keyvaulttest.51.138.82.127.nip.io
